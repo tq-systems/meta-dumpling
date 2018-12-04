@@ -12,4 +12,5 @@ IMAGE_INSTALL += "\
     packagegroup-hwutils \
     packagegroup-fsutils \
     packagegroup-netutils \
+    packagegroup-sysutils \
 "
