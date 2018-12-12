@@ -15,4 +15,5 @@ IMAGE_INSTALL += "\
     packagegroup-fsutils \
     packagegroup-netutils \
     packagegroup-sysutils \
+    packagegroup-testutils \
 "
