@@ -14,3 +14,6 @@ IMAGE_INSTALL += "\
     packagegroup-netutils \
     packagegroup-sysutils \
 "
+
+# force openssh to prevent conflict with dropbear
+EXTRA_IMAGE_FEATURES += " ssh-server-openssh"
