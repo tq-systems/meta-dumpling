@@ -13,6 +13,7 @@ IMAGE_INSTALL += "\
     packagegroup-fsutils \
     packagegroup-netutils \
     packagegroup-sysutils \
+    ${@bb.utils.contains('MACHINE_FEATURES', 'can', ' packagegroup-can', '', d)} \
 "
 
 # force openssh to prevent conflict with dropbear
