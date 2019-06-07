@@ -2,13 +2,14 @@ require dynamic-layers/qt5-layer/recipes-fsl/images/fsl-image-qt5.bb
 
 SUMMARY =  "This is a generic image for TQ SOM with qt5."
 
-IMAGE_LINGUAS += " en-us "
+IMAGE_LINGUAS_append = " en-us "
 
 LICENSE = "MIT"
 
 inherit distro_features_check
 
 IMAGE_INSTALL += "\
+    ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', ' packagegroup-systemd', '', d)} \
     packagegroup-hwutils \
     packagegroup-fsutils \
     packagegroup-netutils \
