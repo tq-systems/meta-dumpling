@@ -2,7 +2,7 @@ require recipes-core/images/core-image-minimal.bb
 
 SUMMARY =  "This image is for TQ SOM in network oriented designs."
 
-IMAGE_LINGUAS = " en-us "
+IMAGE_LINGUAS_append = " en-us "
 
 LICENSE = "MIT"
 
