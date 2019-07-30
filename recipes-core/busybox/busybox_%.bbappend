@@ -6,6 +6,9 @@ SRC_URI += "\
 	file://enable-DEVMEM.cfg \
 	file://enable-VERBOSE_USAGE.cfg \
 	file://enable-DD_STATUS_LINE.cfg \
+	file://enable-TFTP_FULL_FEATURES.cfg \
+	file://disable-TELNET.cfg \
+	file://disable-FTP.cfg \
 "
 
 # necessary to prevent above change being reverted during "do_compile"
