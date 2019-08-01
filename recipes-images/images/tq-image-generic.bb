@@ -2,6 +2,10 @@ require recipes-core/images/core-image-minimal.bb
 
 SUMMARY =  "This image is for TQ SOM in network oriented designs."
 
+DESCRIPTION = "Demo image based on core-image-minimal and essential packages \
+for the machine. This creates a large image and includes also debug tools, not \
+directly suitable for production - also from the aspect of security."
+
 IMAGE_LINGUAS_append = " en-us "
 
 LICENSE = "MIT"
@@ -21,4 +25,4 @@ IMAGE_INSTALL += "\
 "
 
 # force openssh to prevent conflict with dropbear
-EXTRA_IMAGE_FEATURES += " ssh-server-openssh"
+IMAGE_FEATURES += " ssh-server-openssh"
