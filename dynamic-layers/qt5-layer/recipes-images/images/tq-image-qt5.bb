@@ -1,6 +1,14 @@
+####
+# TODO: remove this dependency. this brings in debug-tweaks, which allows
+# passwordless ssh and other stuff only usable for debug
+####
 require dynamic-layers/qt5-layer/recipes-fsl/images/fsl-image-qt5.bb
 
-SUMMARY =  "This is a generic image for TQ SOM with qt5."
+SUMMARY =  "This is a generic demo image for TQ SOM with qt5."
+
+DESCRIPTION = "Demo image based on FSL/NXP validation image. \
+This creates a very large image and also debug tools, not \
+suitable for production."
 
 IMAGE_LINGUAS_append = " en-us "
 
@@ -19,4 +27,4 @@ IMAGE_INSTALL += "\
 "
 
 # force openssh to prevent conflict with dropbear
-EXTRA_IMAGE_FEATURES += " ssh-server-openssh"
+IMAGE_FEATURES += " ssh-server-openssh"
