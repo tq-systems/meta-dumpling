@@ -20,6 +20,7 @@ RDEPENDS_${PN} = " \
     perf \
     strace \
     gdbserver \
+    packagegroup-core-nfs-client \
     ${@bb.utils.contains('BBFILE_COLLECTIONS', 'openembedded-layer', ' atop', '', d)} \
     ${@bb.utils.contains('BBFILE_COLLECTIONS', 'openembedded-layer', ' dstat', '', d)} \
     ${@bb.utils.contains('BBFILE_COLLECTIONS', 'openembedded-layer', ' iotop', '', d)} \
