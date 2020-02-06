@@ -11,4 +11,6 @@ RDEPENDS_${PN} = " \
     ${@bb.utils.contains('BBFILE_COLLECTIONS', 'openembedded-layer', ' spitools', '', d)} \
     ${@bb.utils.contains('BBFILE_COLLECTIONS', 'openembedded-layer', ' lmsensors-sensors', '', d)} \
     ${@bb.utils.contains('BBFILE_COLLECTIONS', 'openembedded-layer', ' libgpiod', '', d)} \
+    minicom \
+    screen \
     "
