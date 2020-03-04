@@ -1,6 +1,7 @@
+# look for files in the layer first
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI += "\
+SRC_URI_append = "\
 	file://enable-BEEP.cfg \
 	file://enable-CHAT.cfg \
 	file://enable-DEVMEM.cfg \
