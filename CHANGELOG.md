@@ -5,6 +5,16 @@ Releases are named with the following scheme:
 
 `<Yocto Project version name>.<TQ module family>.BSP.SW.<version number>`
 
+## Next release
+
+### Added
+
+* libjitterentropy: backport from poy / zeus
+
+### Changed
+
+* rng-tools: upgrade to 6.9
+
 ## sumo.TQMa8.BSP.SW.0017
 
 ### Added
