@@ -3,6 +3,10 @@
 # if needed perf can be backported to older kernel
 # or perf recipe could be changed to ressurect python2 support
 
+PACKAGECONFIG_remove_tqma8x = "scripting"
+PACKAGECONFIG_remove_tqma8mx = "scripting"
+PACKAGECONFIG_remove_tqma8xx = "scripting"
+PACKAGECONFIG_remove_tqma8xxs = "scripting"
 PACKAGECONFIG_remove_tqma6x = "scripting"
 PACKAGECONFIG_remove_tqma7x = "scripting"
 PACKAGECONFIG_remove_tqma6ulx = "scripting"
