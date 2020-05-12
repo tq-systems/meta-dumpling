@@ -11,8 +11,10 @@ inherit packagegroup
 # maybe perl comes also in as a dependency for mtrace
 # and that's not what we want
 
+# we can not use perf at the moment, this is fixed in a newer version of poky but
+# this newer version breaks gstreamer recipes im meta-imx
+
 RDEPENDS_${PN} = " \
-    perf \
     strace \
     gdbserver \
     "
