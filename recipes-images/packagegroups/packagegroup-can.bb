@@ -4,7 +4,5 @@ LICENSE = "MIT"
 inherit packagegroup
 
 RDEPENDS_${PN} = " \
-    ethtool \
     iproute2 \
     "
-
