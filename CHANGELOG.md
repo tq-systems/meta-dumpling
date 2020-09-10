@@ -1,9 +1,20 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-Releases are named with thefollowing scheme:
+Releases are named with the following scheme:
 
 `<Yocto Project version name>.<TQ module family>.BSP.SW.<version number>`
+
+## zeus.TQMa8.BSP.SW.0025
+
+### Changed
+
+* images: add tq-image-weston based on core-image-weston
+* images: simplify recipes, use a shared include
+* packagegroup-testutils: remove perf to prevenmt build break
+* perf: disable scripting
+* switch to zeus
+* synchronize branch `warrior-tqma8` with generic branch
 
 ## warrior.MBa6ULxL.BSP.SW.0101
 
