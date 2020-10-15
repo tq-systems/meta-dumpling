@@ -5,6 +5,24 @@ Releases are named with the following scheme:
 
 `<Yocto Project version name>.<TQ module family>.BSP.SW.<version number>`
 
+## zeus.TQMa8.BSP.SW.0030
+
+### Changed
+
+* packagegroup-hwutils: add usb tools in dynamic-layers/openembedded-layer
+* packagegroup-testutils: add alsa-utils-speakertest
+* packagegroup-hwutils: set PACKAGE\_ARCH to MACHINE\_ARCH since we add packages
+  depending on MACHINE\_FEATURES
+* packagegroup-testutils: add more deps depending on openembedded-layer to have
+  some more tools for testing
+* images: add a qt5 enabled image
+* packagegroup-sysutils: enable u-boot-fw-utils
+* busybox: remove superseeded config fragment
+* gstreamer1.0-plugins-bad: bbappend for meta-freesacale to disable opencv in
+  PACKAGECONFIG to reduce image size and build time
+* tq-image-weston: add gstreamer packages
+* packagegroup-fsutils: add mtd-utils-{jffs2,ubifs,misc} for QSPI testing
+
 ## zeus.TQMa8.BSP.SW.0025
 
 ### Changed
