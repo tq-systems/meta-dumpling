@@ -12,6 +12,7 @@ IMAGE_INSTALL += "\
     packagegroup-netutils \
     packagegroup-sysutils \
     packagegroup-testutils \
+    ${@bb.utils.contains('COMBINED_FEATURES', 'wifi', 'packagegroup-wifi', '',d)} \
     ${@bb.utils.contains('MACHINE_FEATURES', 'can', ' packagegroup-can', '', d)} \
     ${@bb.utils.contains('MACHINE_FEATURES', 'alsa', ' packagegroup-audio', '', d)} \
 "
