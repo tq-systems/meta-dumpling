@@ -5,6 +5,12 @@ Releases are named with the following scheme:
 
 `<Yocto Project version name>.<TQ module family>.BSP.SW.<version number>`
 
+## next release
+
+### Added
+
+* add new packagegroup for wifi relevant packages
+
 ## zeus.TQMa8.BSP.SW.0035
 
 ### Changed
