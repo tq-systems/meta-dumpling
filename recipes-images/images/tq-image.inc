@@ -14,7 +14,7 @@ IMAGE_INSTALL += "\
     packagegroup-testutils \
     ${@bb.utils.contains('COMBINED_FEATURES', 'wifi', 'packagegroup-wifi', '',d)} \
     ${@bb.utils.contains('MACHINE_FEATURES', 'can', ' packagegroup-can', '', d)} \
-    ${@bb.utils.contains('MACHINE_FEATURES', 'alsa', ' packagegroup-audio', '', d)} \
+    ${@bb.utils.contains('COMBINED_FEATURES', 'alsa', ' packagegroup-audio', '', d)} \
 "
 
 # force openssh to prevent conflict with dropbear
