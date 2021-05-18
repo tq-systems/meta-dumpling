@@ -7,6 +7,7 @@ inherit distro_features_check
 IMAGE_INSTALL += "\
     packagegroup-base \
     ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', ' packagegroup-systemd', '', d)} \
+    packagegroup-camtest \
     packagegroup-hwutils \
     packagegroup-fsutils \
     packagegroup-netutils \
