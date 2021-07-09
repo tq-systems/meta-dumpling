@@ -5,6 +5,12 @@ Releases are named with the following scheme:
 
 `<Yocto Project version name>.<TQ module family>.BSP.SW.<version number>`
 
+### Added
+
+* kmscube: add bbappend to make use of current upstream
+* recipes-multimedia: add bayer2rgb-neon and bayer2rgb gstreamer support
+* recipes-support: add gengetopt
+
 ## zeus.TQMa8.BSP.SW.0050
 
 ### Added
