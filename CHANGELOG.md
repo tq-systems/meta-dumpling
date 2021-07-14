@@ -5,9 +5,17 @@ Releases are named with the following scheme:
 
 `<Yocto Project version name>.<TQ module family>.BSP.SW.<version number>`
 
+## zeus.TQMa8.BSP.SW.0053
+
 ### Added
 
-* kmscube: add bbappend to make use of current upstream
+* kmscube: add bbappend to make use of current upstream and allow running with
+  detaches STDIN
+* add a package group for camera testing related packages and use it for images
+  depending on camera machine feature
+  - various gstreamer plugins
+  - debayering tool
+  - v4l2-utils / yavta
 * recipes-multimedia: add bayer2rgb-neon and bayer2rgb gstreamer support
 * recipes-support: add gengetopt
 
