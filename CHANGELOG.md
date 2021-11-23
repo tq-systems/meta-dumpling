@@ -5,6 +5,16 @@ Releases are named with the following scheme:
 
 `<Yocto Project version name>.<TQ module family>.BSP.SW.<version number>`
 
+
+## zeus.TQMLS1028A.BSP.SW.0106
+
+### Changed
+
+* Enable scripting feature of perf recipe for all machines
+
+  The perf recipe was updated in meta-tq, fixing the build issue that required
+  disabling scripting.
+
 ## zeus.TQMLS1028A.BSP.SW.0105
 
 ### Fixed
