@@ -27,7 +27,6 @@ RDEPENDS_${PN} = "\
     atop \
     dstat \
     evtest \
-    fb-test \
     gdbserver \
     ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', ' ${OPENGL_RDEPENDS}', '', d)} \
     htop \
@@ -48,6 +47,15 @@ RRECOMMENDS_${PN} = "\
     openssh-sftp-server \
 "
 
+DISPLAY_RRECOMMENDS = "\
+    fb-test \
+    libdrm-tests \
+"
+
+RRECOMMENDS_${PN} += "\
+    ${@bb.utils.contains('MACHINE_FEATURES', 'display', '${DISPLAY_RRECOMMENDS}', '', d)} \
+"
+
 # note: kmscube is only available if we have opengl and if virtual/libgbm
 # is built. Since this is at least not the case for TQMa6x with vendor graphic
 # stack we need this ugly construct
@@ -58,4 +66,3 @@ RRECOMMENDS_${PN} += "\
         'kmscube', '', \
     )} \
 "
-
