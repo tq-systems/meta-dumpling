@@ -18,6 +18,10 @@ ALSA_RDEPENDS = "\
     alsa-utils-speakertest \
 "
 
+OPENGL_RDEPENDS = "\
+    glmark2 \
+"
+
 RDEPENDS_${PN} = "\
     ${@bb.utils.contains('COMBINED_FEATURES', 'alsa', ' ${ALSA_RDEPENDS}', '', d)} \
     atop \
@@ -25,7 +29,7 @@ RDEPENDS_${PN} = "\
     evtest \
     fb-test \
     gdbserver \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', ' glmark2', '', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', ' ${OPENGL_RDEPENDS}', '', d)} \
     htop \
     iotop \
     mc \
@@ -50,7 +54,7 @@ RRECOMMENDS_${PN} = "\
 RRECOMMENDS_${PN} += "\
     ${@oe.utils.ifelse( \
         bb.utils.contains('DISTRO_FEATURES', 'opengl', True, False, d) and \
-	    d.getVar('PREFERRED_PROVIDER_virtual/libgbm') != "", \
+            d.getVar('PREFERRED_PROVIDER_virtual/libgbm') != "", \
         'kmscube', '', \
     )} \
 "
