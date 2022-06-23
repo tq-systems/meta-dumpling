@@ -9,6 +9,18 @@ Releases are named with the following scheme:
 
 ## Next Release
 
+## hardknott.TQMa8.BSP.SW.0085
+
+### Changed
+
+* distros: build small SD / e-MMC boot image for SOM with TI CPU
+* packagegroup-testutils:
+  * improve package handling for opengl related stuff
+  * use MACHINE_FEATURE display as condition for libdrm test tools
+* packagegroup-hwutils: improve handling of usb related packages. usb-modeswitch
+  is now provided as new subpackage. This is not used by default because it is
+  rarely needed but depends on tcl
+
 ## hardknott.TQMLS1028A.BSP.SW.0107
 
 ### Changed
