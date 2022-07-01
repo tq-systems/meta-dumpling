@@ -9,6 +9,14 @@ Releases are named with the following scheme:
 
 ## Next Release
 
+### Added
+
+* doc: paragraph for SDK usage
+
+### Fixed
+
+* distros: fix broken SDK build (due to a wrong named variable)
+
 ## hardknott.TQMa8.BSP.SW.0085
 
 ### Changed
