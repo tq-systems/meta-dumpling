@@ -9,6 +9,10 @@ Releases are named with the following scheme:
 
 ## Next Release
 
+### Added
+
+* distros: dumpling: enable bluetooth as DISTRO_FEATURE by default
+
 ## hardknott.TQMa335x.BSP.SW.0122
 
 ### Added
