@@ -27,4 +27,5 @@ THISIMAGE_GSTREAMER_PLUGINS = "\
 IMAGE_INSTALL_append = "\
     weston-examples \
     ${THISIMAGE_GSTREAMER_PLUGINS} \
+    packagegroup-dumpling-gstreamer \
 "
