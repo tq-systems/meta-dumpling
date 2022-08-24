@@ -13,6 +13,12 @@ Releases are named with the following scheme:
 
 * distros: dumpling: enable bluetooth as DISTRO_FEATURE by default
 
+### Fixed
+
+* images: tq-image-weston-debug: bbappend for image did not work after
+  splitting image recipes. IMX gstreamer packages were missing when using
+  meta-freescale together with `use-nxp-bsp`
+
 ## hardknott.TQMa335x.BSP.SW.0122
 
 ### Added
