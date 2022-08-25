@@ -9,15 +9,20 @@ Releases are named with the following scheme:
 
 ## Next Release
 
-### Added
-
-* distros: dumpling: enable bluetooth as DISTRO_FEATURE by default
-
 ### Fixed
 
+* Fix missing `WAYLAND_DISPLAY` environment variable. Allows access for
+  members of `wayland` group
 * images: tq-image-weston-debug: bbappend for image did not work after
   splitting image recipes. IMX gstreamer packages were missing when using
   meta-freescale together with `use-nxp-bsp`
+
+## hardknott.TQMa64xxL.BSP.SW.0001
+## hardknott.TQMa335x.BSP.SW.0123
+
+### Added
+
+* distros: dumpling: enable bluetooth as DISTRO_FEATURE by default
 
 ## hardknott.TQMa335x.BSP.SW.0122
 
