@@ -1,5 +1,12 @@
 # OpenEmbedded / Yocto Project evaluation BSP layer for TQ-Systems ARM SOM
 
+# Important!
+For kirkstone branch, this layer has been moved to the `meta-tq` repository.
+
+This branch is not supported any more, please update your configuration to use the
+distribution layer from `meta-tq` repository.
+
+# Old content
 This README file contains information on the content of the meta-dumpling layer.
 
 Please see the corresponding sections below for details.
