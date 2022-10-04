@@ -31,6 +31,7 @@ RDEPENDS_${PN} = "\
     ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', ' ${OPENGL_RDEPENDS}', '', d)} \
     htop \
     iotop \
+    libiio-tests \
     mc \
     memtester \
     nano \
