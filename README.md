@@ -1,3 +1,6 @@
+**ATTENTION**: This branch is only maintained for TQMaRZG2x machines, use
+a more recent branch for all other machines
+
 # OpenEmbedded / Yocto Project evaluation BSP layer for TQ-Systems ARM SOM
 
 This README file contains information on the content of the meta-dumpling layer.
@@ -80,18 +83,20 @@ BBLAYERS ?= "\
 The meta-dumpling layer defines images recipes for test / evaluation of
 TQ-Systems SOM:
 
-| image                     | intended use                                                     |
-| ------------------------- | ---------------------------------------------------------------- |
-| tq-image-small            | based on poky core-image-minimal, usable for UBI rootfs          |
-| tq-image-small-debug      | based on poky tq-image-small, added debug features               |
-| tq-image-generic          | based on poky core-image-minimal                                 |
-| tq-image-generic-debug    | based on tq-image-generic, added debug features and packages     |
-| tq-image-generic-rt       | based on poky core-image-minimal, PREEMPT_RT kernel              |
-| tq-image-generic-rt-debug | based on tq-image-generic-rt, added debug features and packages  |
-| tq-image-weston           | based on poky core-image-weston                                  |
-| tq-image-weston-debug     | based on tq-image-weston, added debug features and packages      |
-| tq-image-qt5              | based on tq-image-weston, added qt5 support                      |
-| tq-image-qt5-debug        | based on tq-image-qt5, added debug features and packages         |
+| image                     | intended use                                                                |
+| ------------------------- | --------------------------------------------------------------------------- |
+| tq-image-small            | based on poky core-image-minimal, usable for UBI rootfs                     |
+| tq-image-small-debug      | based on poky tq-image-small, added debug features                          |
+| tq-image-generic          | based on poky core-image-minimal                                            |
+| tq-image-generic-debug    | based on tq-image-generic, added debug features and packages                |
+| tq-image-generic-rt       | based on poky core-image-minimal, PREEMPT_RT kernel                         |
+| tq-image-generic-rt-debug | based on tq-image-generic-rt, added debug features and packages             |
+| tq-image-weston           | based on poky core-image-weston                                             |
+| tq-image-weston-debug     | based on tq-image-weston, added debug features and packages                 |
+| tq-image-qt5              | based on tq-image-weston, added qt5 support                                 |
+| tq-image-qt5-debug        | based on tq-image-qt5, added debug features and packages                    |
+| rzg2-image-weston         | based on poky core-image-weston, meta-renesas appends for core-image-weston |
+| rzg2-image-weston-debug   | based on tq-image-weston, added debug features and packages                 |
 
 **Attention:** These image recipes can be used as a starting point for own customization.
 Every recipe comes in two flavours. The images suffixed with `debug` add `debug-tweaks` to
@@ -127,17 +132,19 @@ The meta-dumpling layer defines distros as starting point for own customization.
 These distros are also available for usage together with vendor based kernel /
 vendor hardware support layer.
 
-| distro name          | purpose                                                              |
-| -------------------- | -------------------------------------------------------------------- |
-| spaetzle             | small size for usage with \[Q\]SPI-NOR flash                         |
-| spaetzle-nxp         | small size for usage with \[Q\]SPI-NOR flash with NXP / FSLC kernel  |
-| spaetzle-ti          | small size for usage with \[Q\]SPI-NOR flash with TI kernel          |
-| dumpling             | systemd, features depends on machine settings                        |
-| dumpling-nxp         | systemd, features depends on machine settings with NXP / FSLC kernel |
-| dumpling-ti          | systemd, features depends on machine settings with TI kernel         |
-| dumpling-wayland     | like dumpling, additional wayland / weston                           |
-| dumpling-wayland-nxp | like dumpling-nxp, additional wayland / weston                       |
-| dumpling-wayland-ti  | like dumpling-ti, additional wayland / weston                       |
+| distro name           | purpose                                                              |
+| --------------------- | -------------------------------------------------------------------- |
+| spaetzle              | small size for usage with \[Q\]SPI-NOR flash                         |
+| spaetzle-nxp          | small size for usage with \[Q\]SPI-NOR flash with NXP / FSLC kernel  |
+| spaetzle-ti           | small size for usage with \[Q\]SPI-NOR flash with TI kernel          |
+| dumpling              | systemd, features depends on machine settings                        |
+| dumpling-nxp          | systemd, features depends on machine settings with NXP / FSLC kernel |
+| dumpling-rzg2         | systemd, features depends on machine settings with Renesas kernel    |
+| dumpling-ti           | systemd, features depends on machine settings with TI kernel         |
+| dumpling-wayland      | like dumpling, additional wayland / weston                           |
+| dumpling-wayland-nxp  | like dumpling-nxp, additional wayland / weston                       |
+| dumpling-wayland-rzg2 | like dumpling-rzg2, additional wayland / weston                     |
+| dumpling-wayland-ti   | like dumpling-ti, additional wayland / weston                        |
 
 **Attention:** These distro configs can be used as a starting point for own
 customization. Because of the intended usage, they are focused on demonstration.
