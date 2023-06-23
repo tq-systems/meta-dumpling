@@ -58,11 +58,15 @@ RRECOMMENDS_${PN} += "\
 
 # note: kmscube is only available if we have opengl and if virtual/libgbm
 # is built. Since this is at least not the case for TQMa6x with vendor graphic
-# stack we need this ugly construct
+# stack we need this ugly construct.
+#
+# kmscube fails to build with the GLES package provded by Renesas for their
+# PowerVR GPU, so don't build it in this case either.
 RRECOMMENDS_${PN} += "\
     ${@oe.utils.ifelse( \
         bb.utils.contains('DISTRO_FEATURES', 'opengl', True, False, d) and \
-            d.getVar('PREFERRED_PROVIDER_virtual/libgbm') != "", \
+            d.getVar('PREFERRED_PROVIDER_virtual/libgbm') != "" and \
+            d.getVar('USE_RENESAS_GLES') == 0, \
         'kmscube', '', \
     )} \
 "
